@@ -7,6 +7,7 @@ import uuid
 from typing import Optional
 
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect, HTTPException, BackgroundTasks
+from api.peer_review import router as peer_review_router
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
@@ -15,6 +16,7 @@ from simulation.experiments import EXPERIMENTS
 from analysis.graph import build_interaction_graph, compute_metrics, graph_to_vis_data
 
 app = FastAPI(title="LLM Society Simulator", version="1.0.0")
+app.include_router(peer_review_router)
 
 app.add_middleware(
     CORSMiddleware,
