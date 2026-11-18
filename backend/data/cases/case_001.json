@@ -1,0 +1,59 @@
+
+{
+  "paper": {
+    "id": "paper_001",
+    "title": "Wpływ technologii AI na edukację",
+    "abstract": "Badanie dotyczące zastosowania AI w edukacji.",
+    "content": "Autor analizuje wyniki ankiety przeprowadzonej na 15 studentach i wyciąga wnioski dotyczące wszystkich uczelni.",
+    "version": 1
+  },
+  "reviewers": [
+    {
+      "id": "reviewer_1",
+      "name": "Ekspert metodologiczny",
+      "expertise": 0.9,
+      "criticality": 0.8
+    },
+    {
+      "id": "reviewer_2",
+      "name": "Recenzent ogólny",
+      "expertise": 0.5,
+      "criticality": 0.4
+    },
+    {
+      "id": "reviewer_3",
+      "name": "Początkujący recenzent",
+      "expertise": 0.3,
+      "criticality": 0.2
+    }
+  ],
+  "reviews": [
+    {
+      "paper_id": "paper_001",
+      "reviewer_id": "reviewer_1",
+      "recommendation": "reject",
+      "issues": [
+        {
+          "description": "Zbyt mała próba badawcza i nieuprawnione uogólnianie wyników.",
+          "severity": 5
+        }
+      ],
+      "justification": "Poważne problemy metodologiczne."
+    },
+    {
+      "paper_id": "paper_001",
+      "reviewer_id": "reviewer_2",
+      "recommendation": "accept",
+      "issues": [],
+      "justification": "Temat interesujący i aktualny."
+    },
+    {
+      "paper_id": "paper_001",
+      "reviewer_id": "reviewer_3",
+      "recommendation": "accept",
+      "issues": [],
+      "justification": "Artykuł dobrze się czyta."
+    }
+  ],
+  "expected_decision": "reject"
+}

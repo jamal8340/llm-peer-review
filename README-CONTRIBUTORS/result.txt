@@ -1,0 +1,152 @@
+PS D:\IT\Sem 5\Studio\llm-peer-review\backend> .\.venv\Scripts\python.exe -c "from config import settings; from groq import Groq; client = Groq(api_key=settings.groq_api_key); [print(m.id) for m in client.models.list().data]"
+canopylabs/orpheus-v1-english
+meta-llama/llama-prompt-guard-2-86m
+openai/gpt-oss-120b
+whisper-large-v3-turbo
+qwen/qwen3.8-27b
+canopylabs/orpheus-arabic-saudi
+whisper-large-v3
+meta-llama/llama-prompt-guard-2-22m
+allam-2-7b
+openai/gpt-oss-safeguard-20b
+openai/gpt-oss-20b
+PS D:\IT\Sem 5\Studio\llm-peer-review\backend> .\.venv\Scripts\python.exe -m peer_review.llm_experiment
+[LLM] Generowanie recenzji: Ekspert metodologiczny
+[LLM] Generowanie recenzji: Recenzent ogólny
+[LLM] Generowanie recenzji: Początkujący recenzent
+{
+  "paper_id": "paper_001",
+  "mode": "llm",
+  "model": "openai/gpt-oss-20b",
+  "expected_decision": "reject",
+  "reviews": [
+    {
+      "paper_id": "paper_001",
+      "reviewer_id": "reviewer_1",
+      "recommendation": "reject",
+      "issues": [
+        {
+          "description": "Inadequate sample size and lack of sampling strategy",
+          "severity": 5,
+          "justification": "Only 15 students were surveyed, with no description of how they were selected or whether they represent the broader student population. This severely limits the generalizability of the findings."
+        },
+        {
+          "description": "No description of survey instrument or validation",
+          "severity": 4,
+          "justification": "The abstract and content do not provide details on the questionnaire, its construction, or any pilot testing, raising concerns about measurement validity."
+        },
+        {
+          "description": "Absence of statistical analysis or reporting of results",
+          "severity": 5,
+          "justification": "The author claims to analyze results but provides no data, statistical tests, or effect size estimates, making it impossible to assess the reliability of the conclusions."
+        },
+        {
+          "description": "Overgeneralization of findings to all universities",
+          "severity": 5,
+          "justification": "Drawing conclusions about all universities from a sample of 15 students is logically invalid without a representative sample or justification for extrapolation."
+        },
+        {
+          "description": "Lack of ethical approval or informed consent information",
+          "severity": 3,
+          "justification": "The submission does not mention whether ethical clearance was obtained or how participants provided informed consent, which is a standard requirement for research involving human subjects."
+        },
+        {
+          "description": "No literature review or theoretical framework",
+          "severity": 3,
+          "justification": "The manuscript fails to situate its findings within existing research on AI in education, limiting the scholarly contribution and contextual understanding."
+        }
+      ],
+      "justification": "The submission presents an extremely limited empirical investigation that lacks methodological rigor, comprehensive analysis, and contextual grounding. The author reports a survey of only 15 students and extrapolates findings to all universities without justification. Key components such as sampling strategy, survey instrument validation, statistical treatment, and ethical considerations are absent. Consequently, the study cannot support the broad claims made, and the conclusions are unsupported by the evidence presented."
+    },
+    {
+      "paper_id": "paper_001",
+      "reviewer_id": "reviewer_2",
+      "recommendation": "reject",
+      "issues": [
+        {
+          "description": "Insufficient sample size and lack of sampling details",
+          "severity": 5,
+          "justification": "The study reports results from only 15 students, with no description of how they were selected or whether they are representative of the broader student population."
+        },
+        {
+          "description": "Unwarranted generalization to all universities",
+          "severity": 5,
+          "justification": "The authors draw conclusions about all universities based on data from a single, small sample, violating principles of external validity."
+        },
+        {
+          "description": "No description of survey instrument or AI technologies studied",
+          "severity": 4,
+          "justification": "The manuscript provides no details on the questionnaire items, the AI tools referenced, or how the survey measured attitudes or outcomes."
+        },
+        {
+          "description": "Absence of statistical analysis and reporting of results",
+          "severity": 4,
+          "justification": "There is no mention of any statistical tests, effect sizes, or confidence intervals, making it impossible to assess the reliability of the reported findings."
+        },
+        {
+          "description": "Missing ethical considerations",
+          "severity": 3,
+          "justification": "The paper does not state whether ethical approval was obtained or whether participants gave informed consent."
+        }
+      ],
+      "justification": "The manuscript presents an extremely limited empirical investigation that is insufficient to support the broad claims made. The study is based on a survey of only 15 students, with no information on sampling strategy, response rate, or demographic representation. The authors extrapolate findings to all universities without justification, violating basic principles of external validity. Moreover, the abstract and content lack detail on the survey instrument, the AI technologies examined, and the analytical methods employed. No statistical analysis or discussion of effect sizes is provided, and there is no evidence of ethical approval or informed consent. These methodological shortcomings, coupled with the absence of a rigorous discussion of limitations, render the scientific conclusions unsupported. Consequently, the paper does not meet the standards for publication."
+    },
+    {
+      "paper_id": "paper_001",
+      "reviewer_id": "reviewer_3",
+      "recommendation": "reject",
+      "issues": [
+        {
+          "description": "Very small and unrepresentative sample size (15 students) used to generalize to all universities.",
+          "severity": 5,
+          "justification": "The content states \"wyniki ankiety przeprowadzonej na 15 studentach i wyciąga wnioski dotyczące wszystkich uczelni.\""
+        },
+        {
+          "description": "No description of sampling method or participant recruitment.",
+          "severity": 4,
+          "justification": "The text does not mention how the 15 students were selected, leaving questions about representativeness."
+        },
+        {
+          "description": "Survey instrument details (questions, validity, reliability) are omitted.",
+          "severity": 4,
+          "justification": "The abstract and content provide no information on the survey design or its psychometric properties."
+        },
+        {
+          "description": "Absence of statistical analysis or evidence of data processing.",
+          "severity": 3,
+          "justification": "The submission claims to analyze results but does not report any statistical methods or results."
+        },
+        {
+          "description": "Overgeneralization of findings to all universities without justification.",
+          "severity": 5,
+          "justification": "The conclusion states that results apply to all universities, despite the limited sample."
+        },
+        {
+          "description": "No discussion of study limitations or potential biases.",
+          "severity": 4,
+          "justification": "The content lacks any acknowledgement of methodological constraints or limitations."
+        }
+      ],
+      "justification": "The submission presents a very limited description of a study that surveyed only 15 students and then draws broad conclusions about all universities. The methodology is inadequately described: there is no information on how the participants were selected, how the survey was designed, or how the data were analyzed. Consequently, the evidence is insufficient to support the claims made, and the conclusions overgeneralize from an unrepresentative sample. The paper lacks a discussion of limitations, and no statistical analysis is reported. These shortcomings severely undermine the scientific validity of the work."
+    }
+  ],
+  "results": [
+    {
+      "paper_id": "paper_001",
+      "strategy": "majority",
+      "recommendation": "reject",
+      "justification": "Majority vote: ACCEPT=0, REJECT=3",
+      "score": 0.0,
+      "correct": true
+    },
+    {
+      "paper_id": "paper_001",
+      "strategy": "expertise_weighted",
+      "recommendation": "reject",
+      "justification": "Weighted vote: ACCEPT=0.00, REJECT=1.70",
+      "score": 0.0,
+      "correct": true
+    }
+  ]
+}
+PS D:\IT\Sem 5\Studio\llm-peer-review\backend> 
