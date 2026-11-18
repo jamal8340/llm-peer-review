@@ -6,10 +6,12 @@ import Experiments from './pages/Experiments'
 import GraphPage from './pages/GraphPage'
 import ReportPage from './pages/ReportPage'
 import FeedPage from './pages/FeedPage'
+import PeerReview from './pages/PeerReview'
 
 const NAV = [
   { to: '/', label: 'Dashboard', icon: '⬡' },
   { to: '/experiments', label: 'Eksperymenty', icon: '⚗' },
+  { to: '/peer-review', label: 'Peer Review POC', icon: '📝' },
   { to: '/graph', label: 'Graf', icon: '◎' },
   { to: '/feed', label: 'Feed', icon: '◈' },
   { to: '/report', label: 'Raport', icon: '▦' },
@@ -100,6 +102,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/experiments" element={<Experiments />} />
+          <Route path="/peer-review" element={<PeerReview />} />
           <Route path="/graph" element={<GraphPage />} />
           <Route path="/feed" element={<FeedPage />} />
           <Route path="/report" element={<ReportPage />} />
